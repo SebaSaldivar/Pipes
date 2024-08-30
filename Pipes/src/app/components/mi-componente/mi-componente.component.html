@@ -1,0 +1,18 @@
+<table>
+    <thead>
+      <tr>
+        <th>DNI</th>
+        <th>Nombre</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let persona of personas">
+        <tr *ngIf="persona.Activo">
+          <td>{{ persona.DNI }}</td>
+          <td>{{ persona.Nombre }}</td>
+          <td>{{ persona.Edad | formatofecha }}</td>
+
+        </tr>
+      </ng-container>
+    </tbody>
+  </table>
